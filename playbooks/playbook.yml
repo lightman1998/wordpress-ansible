@@ -1,14 +1,13 @@
- - hosts: all
-   gather_facts: False
+- hosts: all
+  connection: local
+  tasks:
+  - name: install python 2
+    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
 
-   tasks:
-   - name: install python 2
-     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
-
- - hosts: wordpress
-
-   roles:
-     - server
-     - php
-     - mysql
-     - wordpress
+- hosts: wordpress
+  connection: local
+  roles:
+    - server
+    - php
+    - mysql
+    - wordpress
