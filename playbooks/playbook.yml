@@ -5,7 +5,8 @@
   - name: install python 2
     package:
       name:
-        - python-minimal
+        - python
+        - python3
       state: present
 
 - hosts: wordpress
