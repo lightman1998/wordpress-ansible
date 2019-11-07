@@ -1,2 +1,3 @@
 ---
 # defaults file for wordpress
+default_Appache_site: /var/www/wordpress
