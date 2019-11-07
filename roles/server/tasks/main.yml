@@ -1,0 +1,14 @@
+---
+# tasks file for server
+- name: Install required software
+  become: yes  
+  apt:
+      pkg:
+        - apache2
+        - mysql-server
+        - php7.2-mysql
+        - php7.2
+        - libapache2-mod-php7.2
+        - python-mysqldb
+      state: latest
+      update_cache: yes
