@@ -1,5 +1,9 @@
 ---
 #Create mysql database
+- name: Install PyMySQL lib
+  pip:
+    name: PyMySQL
+
 - name: Create mysql database
   mysql_db: name={{ wp_mysql_db }} state=present
   become: yes

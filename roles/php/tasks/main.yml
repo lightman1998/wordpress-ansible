@@ -2,8 +2,8 @@
 # tasks file for php
 - name: Install php extensions
   become: yes  
-  yum:
-      name:
+  apt:
+      pkg:
         - php7.2-gd
         - php7.2-ssh2
       state: latest

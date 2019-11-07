@@ -2,8 +2,8 @@
 # tasks file for server
 - name: Install required software
   become: yes  
-  yum:
-      name:
+  apt:
+      pkg:
         - apache2
         - mysql-server
         - php7.2-mysql
