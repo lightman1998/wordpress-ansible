@@ -6,6 +6,7 @@
     package:
       name:
         - python-minimal
+        - python-pip
       state: present
 
 - hosts: wordpress
